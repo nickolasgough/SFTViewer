@@ -1,0 +1,27 @@
+Pariticpant info --
+	ID: 0.
+	Name: Nick.
+	Age: 21.
+	Sex: MALE.
+	Student true.
+	Hours on comp: 30.
+	Hours viewing docs: 10.
+	Document name: sample_publication.
+	Number of pages: 14.
+	Condition: Scrolling.
+	Date completed: 15/07/2016_17:00:46.
+--
+Number of trials: 10.
+Average pages visited per tial: 4.6.
+Trial_Number	Trial_Time	Trial_Distance	Number_Pages_Visited	Average_Distance(Pages/visit)	Total_Mouse_Speed(p/ms)	Number_Of_Mouse_Events	Average_Mouse_Speed(p/ms/event)	Total_Scroll_Speed	Number_Of_Scroll_Events	Average_Scroll_Speed(p/ms/event)	Viewer_Time	SFT_Time	Total_Time	Pages_Visited_Via_Thumbs	Pages_Visited_Via_Scrolling	SFT_Switches	Target	Misses
+1	7.12	2	2	1.00	0.00	0	0.00	104.63	23	4.55	7.12	0.00	7.12	0	2	0	1	3	1
+2	7.55	19	3	6.33	0.00	0	0.00	56.14	21	2.67	7.55	0.00	7.55	0	3	0	1	13	8	1
+3	6.58	12	3	4.00	0.00	0	0.00	53.82	17	3.17	6.58	0.00	6.58	0	3	0	2	13	3	2
+4	22.59	19	4	4.75	0.00	0	0.00	181.19	78	2.32	22.59	0.00	22.59	0	4	0	2	13	10	2	2
+5	42.04	53	21	2.52	0.00	0	0.00	159.63	98	1.63	42.04	0.00	42.04	0	21	0	6	8	6	4	3	2	1	6	8	9	10	11	10	9	7	6	5	4	3	2	1	6
+6	5.94	7	2	3.50	0.00	0	0.00	32.90	14	2.35	5.95	0.00	5.95	0	2	0	6	13	6
+7	2.73	1	2	0.50	0.00	0	0.00	10.75	5	2.15	2.73	0.00	2.73	0	2	0	4	3	4
+8	1.96	1	2	0.50	0.00	0	0.00	5.14	3	1.71	1.95	0.00	1.95	0	2	0	4	3	4
+9	3.77	2	2	1.00	0.00	0	0.00	17.73	8	2.22	3.78	0.00	3.78	0	2	0	3	1	3
+10	10.48	14	5	2.80	0.00	0	0.00	41.51	24	1.73	10.47	0.00	10.47	0	5	0	3	11	6	5	4	3
+Task	110.77	130	46	2.83	0.00	0	0.00	663.44	291	2.28	110.76	0.00	110.76	0	46	0

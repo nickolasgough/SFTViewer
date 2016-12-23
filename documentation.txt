@@ -1,0 +1,26 @@
+Nickolas Gough
+
+Method: The interface where the event occurred. 
+  - PageView: The event occurred in the main view of the document; that is, the single-column full-page view.
+  - SFTInterface: The event occurred in the SFT interface, the view with the table of thumbnails.
+  - ThumbsColumn: The event occurred in the column of thumbnails on the side of the main view.
+  - SearchTask: The event occurred as a result of the search task, such as the PageFound event.
+  
+  
+Submethod:
+  - MouseWheel: The interface was scrolled as a result of the mouse-wheel.
+  - MouseDrag: The interface was scrolled as a result of dragging the mouse.
+  - ScrollBar: The interface was scrolled as a result of moving the scrollbar.
+  - PageVisit: The interface (method) was used to visit a page. For example, if the method is SFTInterface and the submethod is PageVisit, the user visited the page by clicking one of the thumbnails in the SFT interface.
+  - PageUpKey: The interface was scrolled as a result of the page up key.
+  - PageDownKey: The interface was scrolled as a result of the page down key.
+  - PageHomeKey: The interface was scrolled as a result of the ctrl+home keys.
+  - PageEndKey: The interface was scrolled as a result of the ctrl+end keys.
+  - DocZoomIn: The interface was zoomed in as a result of ctrl+mouse-wheel. Only occurs in the main full-page view.
+  - DocZoomOut: The interface was zoomed out as a result of ctrl+mouse-wheel. Only occurs in the main page-view.
+  - PageFound: The correct page was located and the current trial has ended. Only occurs while a search task is running.
+  - SFTSwitch: The user has switched from the main full-page view to the SFT interface. Occurs as a result of clicking the mouse-wheel or a mouse right-click.
+  - SessionEnd: The current session has ended. Occurs as a result of the user closing the SFT viewer.
+  - UpArrowKey: The interface was scrolled as a result of the up arrow key.
+  - DownArrowKey: The interface was scrolled as a result of the down arrow key. 
+  - MouseMovement: The mouse was moved. Only occurs while the SFT interface is displayed.

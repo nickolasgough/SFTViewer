@@ -1,0 +1,48 @@
+	/**
+	 * Sends the produced logging file to email.
+	 */
+	public void sendResultsToEmail(){
+		// The email address to send it to.
+		String email = "nick.gough@usask.ca";
+
+		// Retrieve and add to the system properties.
+		Properties props = System.getProperties();
+		props.put("mail.smtp.host", "smtp.gmail.com");
+		props.put("mail.smtp.socketFactory.port", "465");
+		props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+		props.put("mail.smtp.auth", "true");
+		props.put("mail.smtp.port", "465");
+
+		// Establish the password authentication.
+		Authenticator auth = new Authenticator() {
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication("n.gough95@gmail.com", "pdfviewer");
+			}
+		};
+		Session sess = Session.getDefaultInstance(props, auth);
+
+		// Send the message.
+		try{
+			MimeMessage message = new MimeMessage(sess);
+			message.setFrom(email);
+			message.addRecipients(Message.RecipientType.TO, email);
+			message.setSubject("Copy of PDFViewer data. " + this.condition + ".");
+			BodyPart messageBody = new MimeBodyPart();
+			messageBody.setText("The data file has been attached to this email as a text file.");
+			Multipart multipart = new MimeMultipart();
+			multipart.addBodyPart(messageBody);
+			messageBody = new MimeBodyPart();
+			String filename = this.currentLogFile.getName();
+			DataSource source = new FileDataSource(filename);
+			messageBody.setDataHandler(new DataHandler(source));
+			messageBody.setFileName(filename);
+			multipart.addBodyPart(messageBody);
+
+			message.setContent(multipart);
+
+			Transport.send(message);
+		}
+		catch (MessagingException exception){
+			JOptionPane.showMessageDialog(null, "Failed to upload the data file to email. Please report this issue and send the text file that will be generated. The document's name is: " + this.currentLogFile.getName() + ". " + exception.getMessage());
+		}
+	}
